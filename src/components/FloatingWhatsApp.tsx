@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const FloatingWhatsApp: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ export const FloatingWhatsApp: React.FC = () => {
       className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group border-2 border-white"
     >
       <div className="relative">
-        <MessageSquare className="w-5 h-5 fill-white" />
+        <FaWhatsapp className="w-5 h-5 fill-white" />
         <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-300 rounded-full animate-ping" />
         <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-200 rounded-full" />
       </div>

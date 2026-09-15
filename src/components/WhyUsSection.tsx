@@ -51,11 +51,6 @@ export const WhyUsSection: React.FC = () => {
       title: 'Garansi & Bantuan Cepat',
       desc: 'Garansi perbaikan gratis jika terjadi kendala teknis dan siap konsultasi kapan saja lewat WA.'
     },
-    {
-      icon: GraduationCap,
-      title: 'Didampingi Sampai Mahir',
-      desc: 'Diajarkan cara ganti teks, upload foto produk, dan cek pesan masuk dengan panduan simpel.'
-    }
   ];
 
   return (
@@ -78,73 +73,33 @@ export const WhyUsSection: React.FC = () => {
         </div>
 
         {/* Problem vs Solution 3-Column Grid (Venturo Reference) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {problemsAndSolutions.map((item, idx) => (
-            <div
-              key={idx}
-              className="rounded-2xl border border-slate-200 bg-slate-50/50 p-6 flex flex-col justify-between"
-            >
-              <div>
-                {/* Problem Box */}
-                <div className="p-4 rounded-xl bg-rose-50 border border-rose-200/80 mb-5">
-                  <div className="flex items-center gap-2 text-rose-700 font-bold text-xs mb-1.5">
-                    <XCircle className="w-4 h-4 shrink-0" />
-                    <span>Masalah yang Sering Terjadi</span>
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 font-['Outfit'] mb-1">
-                    {item.problem}
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {item.problemDesc}
-                  </p>
-                </div>
-
-                {/* Arrow indicator */}
-                <div className="flex justify-center -my-2 mb-3">
-                  <span className="text-teal-700 text-xs font-bold bg-white px-3 py-1 rounded-full border border-teal-200 shadow-xs">
-                    Solusi KPS Technology ↓
-                  </span>
-                </div>
-
-                {/* Solution Box */}
-                <div className="p-4 rounded-xl bg-teal-50/70 border border-teal-200">
-                  <div className="flex items-center gap-2 text-teal-800 font-bold text-xs mb-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0" />
-                    <span>Standar Layanan Kami</span>
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 font-['Outfit'] mb-1">
-                    {item.solution}
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {item.solutionDesc}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+       
 
         {/* 4 Value Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-          {values.map((v, i) => {
-            const Icon = v.icon;
-            return (
-              <div
-                key={i}
-                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all"
-              >
-                <div className="w-11 h-11 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+        {values.map((v, i) => {
+          const Icon = v.icon;
+          return (
+            <div
+              key={i}
+              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-11 h-11 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-bold text-slate-900 font-['Outfit'] mb-2">
+
+                <h3 className="text-base font-bold text-slate-900 font-['Outfit']">
                   {v.title}
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {v.desc}
-                </p>
               </div>
-            );
-          })}
+
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {v.desc}
+              </p>
+            </div>
+          );
+        })}
         </div>
 
         {/* Venturo Guarantee Callout Banner */}

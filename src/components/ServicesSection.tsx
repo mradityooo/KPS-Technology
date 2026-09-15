@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { DesktopSilhouette, MobileSilhouette, LaptopSilhouette } from './DeviceSilhouettes';
 
 interface ServicesSectionProps {
   onSelectService: (serviceTitle: string) => void;
@@ -11,7 +10,7 @@ interface ServiceVodjoItem {
   id: string;
   title: string;
   shortDesc: string;
-  deviceType: 'desktop' | 'mobile' | 'laptop';
+  image: string;
   features: string[];
 }
 
@@ -20,7 +19,7 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
     id: 'web-dev',
     title: 'Pengembangan Aplikasi Web',
     shortDesc: 'Kami mengembangkan aplikasi web pada berbagai platform open source untuk memastikan pengelolaan anggaran yang efektif.',
-    deviceType: 'desktop',
+    image: '/mockup-pc.png',
     features: [
       'Website profil perusahaan & landing page responsif',
       'Desain modern, cepat dibuka, dan ramah SEO Google',
@@ -32,7 +31,7 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
     id: 'mobile-dev',
     title: 'Pengembangan Aplikasi Seluler',
     shortDesc: 'Pengembangan aplikasi seluler yang mudah digunakan membantu berbagai startup dan perusahaan untuk mendefinisikan kembali pengalaman pengguna seluler.',
-    deviceType: 'mobile',
+    image: '/mockup-android.png',
     features: [
       'Aplikasi multi-platform Android & iOS hemat biaya',
       'Antarmuka nyaman dan navigasi simpel bagi pelanggan',
@@ -42,33 +41,20 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
   },
   {
     id: 'system-dev',
-    title: 'Pengembangan Sistem & AI',
-    shortDesc: 'Meningkatkan bisnis Anda ke masa depan dengan solusi cerdas yang disesuaikan, menghadirkan otomatisasi, wawasan mendalam, dan efisiensi yang tak tertandingi.',
-    deviceType: 'laptop',
+    title: 'Pengembangan Sistem Kasir & POS',
+    shortDesc: 'Sistem kasir dan POS terintegrasi untuk membantu mengelola transaksi penjualan, stok barang, laporan omzet, hingga pencatatan data secara lebih cepat dan efisien.',
+    image: '/mockup-pos.png',
     features: [
-      'Pencatatan transaksi kasir & cetak struk otomatis',
-      'Rekap data stok barang masuk/keluar secara akurat',
-      'Laporan omzet penjualan harian hingga bulanan otomatis',
-      'Dapat diakses dari HP, laptop, maupun komputer toko'
+        'Pencatatan transaksi kasir & cetak struk otomatis',
+        'Pengelolaan stok barang masuk dan keluar',
+        'Laporan penjualan dan omzet secara otomatis',
+        'Dapat diakses dari HP, laptop, maupun komputer toko'
     ]
   }
 ];
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectService }) => {
   const [activeModal, setActiveModal] = useState<ServiceVodjoItem | null>(null);
-
-  const renderDeviceSilhouette = (type: 'desktop' | 'mobile' | 'laptop') => {
-    switch (type) {
-      case 'desktop':
-        return <DesktopSilhouette brandText="kpstechnology" />;
-      case 'mobile':
-        return <MobileSilhouette brandText="kpstechnology" />;
-      case 'laptop':
-        return <LaptopSilhouette brandText="kpstechnology" />;
-      default:
-        return <DesktopSilhouette brandText="kpstechnology" />;
-    }
-  };
 
   return (
     <section id="layanan" className="py-16 sm:py-20 bg-slate-50 text-slate-900 relative border-b border-slate-200">
@@ -98,8 +84,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             >
               <div>
                 {/* Silhouette Device Box (Exact Dark Blueprint as in uploaded photo) */}
-                <div className="w-full h-40 sm:h-44 rounded-xl bg-[#0b1016] border border-slate-800/80 flex items-center justify-center p-2 mb-4 shadow-inner overflow-hidden group-hover:border-slate-700 transition-colors">
-                  {renderDeviceSilhouette(service.deviceType)}
+                <div className="w-full h-40 sm:h-44 rounded-xl bg-[#0b1016] border border-slate-800/80 flex items-center justify-center p-2 mb-4 overflow-hidden group-hover:border-slate-700 transition-colors">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Title */}

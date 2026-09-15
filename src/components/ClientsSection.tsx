@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { OUR_CLIENTS } from '../data/mockData';
 
 interface ClientsSectionProps {
@@ -60,7 +60,7 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ onOpenConsultati
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all flex items-center gap-2"
             >
-              <MessageSquare className="w-4 h-4 fill-white" />
+              <FaWhatsapp className="w-4 h-4 fill-white" />
               <span>Hubungi WhatsApp</span>
             </a>
             <button

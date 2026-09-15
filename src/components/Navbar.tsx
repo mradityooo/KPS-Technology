@@ -41,14 +41,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         
         {/* Brand Logo - Clean & Professional */}
         <a href="#beranda" className="flex items-center gap-3 group" id="brand-logo-link">
-          <div className="w-9 h-9 rounded-lg bg-[#0f4c5c] text-white flex items-center justify-center font-['Outfit'] font-black text-sm tracking-tight shadow-xs">
-            KPS
-          </div>
+         <img
+            src="/Logo KPS.jpeg"
+            alt="KPS Technology"
+            className="w-13 h-13 object-contain"
+          />
           <div className="flex flex-col text-left">
             <span className="font-bold text-base tracking-tight text-slate-900 font-['Outfit'] leading-none">
               KPS Technology
             </span>
-            <span className="text-[11px] text-slate-500 font-medium mt-1">
+            <span className="text-[11px] text-slate-500 font-medium mt-0">
               Software House
             </span>
           </div>

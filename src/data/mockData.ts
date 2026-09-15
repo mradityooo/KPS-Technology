@@ -279,20 +279,20 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'team-1',
-    name: 'Aditya Pratama',
-    position: 'Lead Full-Stack Engineer',
+    name: 'Imam Ali Saputra',
+    position: 'Project Manager',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80'
   },
   {
     id: 'team-2',
-    name: 'Kevin Saputra',
-    position: 'Mobile & Backend Engineer',
+    name: 'Muhammad Radityo',
+    position: 'UI/Ux Designer & Frontend Developer',
     avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80'
   },
   {
     id: 'team-3',
-    name: 'Syifa Rahmadani',
-    position: 'Product & UI/UX Designer',
+    name: 'Subayu Kalla',
+    position: 'Backend Developer',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80'
   }
 ];

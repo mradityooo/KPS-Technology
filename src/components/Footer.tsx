@@ -27,9 +27,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0f4c5c] text-white flex items-center justify-center font-extrabold text-base shadow-sm">
-                KPS
-              </div>
+              <img
+                src="/Logo KPS.jpeg"
+                alt="KPS Technology"
+                className="w-13 h-13 object-contain"
+              />
               <div>
                 <span className="font-extrabold text-lg text-white font-['Outfit'] block leading-none">
                   KPS TECHNOLOGY
@@ -91,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                 <span>
-                  Melayani klien di seluruh Indonesia secara online maupun diskusi tatap muka.
+                  Jalan Nusantara, Bandar Lampung.
                 </span>
               </div>
               <div className="flex items-center gap-2 pt-1">
