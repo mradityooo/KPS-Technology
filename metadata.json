@@ -1,0 +1,6 @@
+{
+  "name": "KPS Technology",
+  "description": "Website resmi KPS Technology - Software House profesional, inovatif, dan terpercaya dengan solusi rekayasa perangkat lunak modern.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
