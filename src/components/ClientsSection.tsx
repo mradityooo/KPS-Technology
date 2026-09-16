@@ -27,17 +27,18 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ onOpenConsultati
         </div>
 
         {/* Pure Logos Grid - Centered Horizontally & Vertically */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto mb-14">
+        <div className="flex flex-wrap items-center justify-center gap-0 sm:gap-2 lg:gap-4 max-w-5xl mx-auto mb-14">
           {OUR_CLIENTS.map((client) => (
             <div
               key={client.id}
               title={client.name}
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white border border-slate-200 hover:border-teal-500 hover:shadow-md transition-all duration-300 flex items-center justify-center p-2 group"
+              className="w-32 h-20 flex items-center justify-center group"
             >
-              {/* Pure Logo Mark - Perfectly Centered */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#0f4c5c] text-white flex items-center justify-center font-['Outfit'] font-black text-xs sm:text-sm tracking-wider shadow-2xs group-hover:scale-105 transition-transform">
-                {client.logoLetter}
-              </div>
+              <img
+                src={client.logo}
+                alt={client.name}
+                 className={`${client.logoClass} object-contain opacity-80 group-hover:opacity-100 transition-all`}
+              />
             </div>
           ))}
         </div>

@@ -262,61 +262,19 @@ export const TEAM_MEMBERS: TeamMember[] = [
 ];
 
 // Daftar Klien Kami (Our Clients)
-export const OUR_CLIENTS: ClientItem[] = [
+export const OUR_CLIENTS = [
   {
-    id: 'client-1',
-    name: 'Mitra Baja Nusantara',
-    industry: 'Distribusi & Konstruksi',
-    logoLetter: 'MBN',
-    projectType: 'Website Profil & Katalog Bahan Bangunan',
-    tagline: 'Perusahaan supplier baja dan material konstruksi regional',
-    bgGradient: 'from-blue-700 to-indigo-900'
+    id: 'iconet',
+    name: 'Iconnet',
+    logo: '/logo-iconnet.png',
+    logoClass: 'w-45 h-29'
   },
   {
-    id: 'client-2',
-    name: 'Klinik Medika Asri',
-    industry: 'Layanan Kesehatan',
-    logoLetter: 'KMA',
-    projectType: 'Landing Page & Sistem Booking Dokter',
-    tagline: 'Fasilitas kesehatan pratama dengan reservasi pasien via web',
-    bgGradient: 'from-emerald-600 to-teal-800'
+    id: 'menara-cakra-buana',
+    name: 'CV. Menara Cakra Buana',
+    logo: '/logo-menara.png',
+    logoClass: 'w-20 h-20'
   },
-  {
-    id: 'client-3',
-    name: 'Grosir Sembako Berkah',
-    industry: 'Retail & Perdagangan',
-    logoLetter: 'GSB',
-    projectType: 'Sistem Kasir (POS) & Manajemen Stok Multi-Gudang',
-    tagline: 'Distributor bahan pokok dengan pencatatan inventori harian',
-    bgGradient: 'from-amber-600 to-orange-800'
-  },
-  {
-    id: 'client-4',
-    name: 'Kopi Senja Roastery',
-    industry: 'Food & Beverage',
-    logoLetter: 'KSR',
-    projectType: 'Website Katalog Kopi & Checkout WhatsApp',
-    tagline: 'Brand kopi artisanal lokal dengan jangkauan pengiriman nasional',
-    bgGradient: 'from-stone-700 to-stone-900'
-  },
-  {
-    id: 'client-5',
-    name: 'Cipta Rekayasa Teknik',
-    industry: 'Jasa Kontraktor & Konsultan',
-    logoLetter: 'CRT',
-    projectType: 'Website Korporat & Portofolio Proyek',
-    tagline: 'Biro konsultansi perencanaan dan rekayasa mekanikal elektrikal',
-    bgGradient: 'from-sky-700 to-blue-900'
-  },
-  {
-    id: 'client-6',
-    name: 'Bintang Furnitur Interior',
-    industry: 'Manufaktur & Desain Interior',
-    logoLetter: 'BFI',
-    projectType: 'Katalog Produk Interaktif & Galeri Proyek',
-    tagline: 'Workshop kustom perabotan kayu dan penataan interior kantor',
-    bgGradient: 'from-slate-700 to-indigo-950'
-  }
 ];
 
 export const FAQ_DATA: FaqItem[] = [
