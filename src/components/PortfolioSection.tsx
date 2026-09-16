@@ -4,10 +4,23 @@ import { ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/mockData';
 import { PortfolioProject } from '../types';
 import { CaseStudyModal } from './CaseStudyModal';
+import { WaveDivider } from './WaveDivider';  
 
 interface PortfolioSectionProps {
   onConsultProject: (title: string) => void;
 }
+
+export const FaqSection = () => {
+  return (
+    <section className="bg-white text-slate-900 relative overflow-hidden pb-0">
+      {/* Konten FAQ */}
+
+      {/* Gelombang transisi menyatu ke Footer gelap */}
+      <WaveDivider toColor="dark" toDark={true} className="h-14 sm:h-20 md:h-24" />
+    </section>
+  );
+};
+
 
 export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultProject }) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -138,11 +151,9 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultPro
       <CaseStudyModal
         project={selectedCaseStudy}
         onClose={() => setSelectedCaseStudy(null)}
-        onConsult={() => {
-          if (selectedCaseStudy) {
-            onConsultProject(`Studi Kasus: ${selectedCaseStudy.title}`);
-            setSelectedCaseStudy(null);
-          }
+        onConsultProject={(projectName) => {
+          onSelectProject(`Studi kasus: ${projectName}`);
+          setSelectedCaseStudy(null);
         }}
       />
     </section>
