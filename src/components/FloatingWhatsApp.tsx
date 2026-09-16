@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 export const FloatingWhatsApp: React.FC = () => {
   return (
     <a
-      href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20website%20atau%20aplikasi."
+      href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20untuk%20konsultasi%20pembuatan%20website%20atau%20aplikasi."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Konsultasi WhatsApp KPS Technology"

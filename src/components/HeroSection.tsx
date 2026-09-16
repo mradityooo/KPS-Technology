@@ -64,7 +64,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
               </button>
 
               <a
-                href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20website"
+                href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20website"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-cta-whatsapp"

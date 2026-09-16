@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         {/* Action CTAs */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20website"
+            href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20website"
             target="_blank"
             rel="noopener noreferrer"
             id="nav-whatsapp-btn"
@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
         {/* Mobile Fast Contact Buttons */}
         <div className="flex lg:hidden items-center gap-2">
           <a
-            href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology"
+            href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-emerald-600 text-white text-xs flex items-center justify-center shadow-xs"

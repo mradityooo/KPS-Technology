@@ -119,7 +119,7 @@ export const WhyUsSection: React.FC = () => {
           </div>
 
           <a
-            href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20ingin%20tanya%20mengenai%20garansi%20dan%20pembuatan%20website"
+            href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20ingin%20tanya%20mengenai%20garansi%20dan%20pembuatan%20website"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-[#0f4c5c] hover:bg-teal-50 font-bold text-xs sm:text-sm transition-all shadow-sm text-center"

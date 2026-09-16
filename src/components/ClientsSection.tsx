@@ -56,7 +56,7 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ onOpenConsultati
 
           <div className="shrink-0 flex items-center gap-3">
             <a
-              href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20tertarik%20untuk%20menjadi%20klien%20dan%20ingin%20konsultasi%20website/aplikasi."
+              href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20untuk%20menjadi%20klien%20dan%20ingin%20konsultasi%20website/aplikasi."
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-xs transition-all flex items-center gap-2"

@@ -102,7 +102,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
               <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3">
                 <a
-                  href={`https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20sudah%20mengisi%20form%20konsultasi%20atas%20nama%20${encodeURIComponent(fullName)}%20(${encodeURIComponent(company || 'Bisnis')}).`}
+                  href={`https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20sudah%20mengisi%20form%20konsultasi%20atas%20nama%20${encodeURIComponent(fullName)}%20(${encodeURIComponent(company || 'Bisnis')}).`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-colors inline-flex items-center justify-center gap-2"

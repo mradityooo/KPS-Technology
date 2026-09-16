@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                 <span>
-                  Jalan Nusantara, Bandar Lampung.
+                  Bandar Lampung, Indonesia
                 </span>
               </div>
               <div className="flex items-center gap-2 pt-1">
@@ -105,12 +105,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <div className="flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a 
-                  href="https://wa.me/6281234567890?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20pembuatan%20website"
+                  href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20pembuatan%20website"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-emerald-400 hover:text-emerald-300 font-semibold"
                 >
-                  +62 812-3456-7890 (WhatsApp)
+                  +62 851-1705-7996 (WhatsApp)
                 </a>
               </div>
               <div className="pt-2">

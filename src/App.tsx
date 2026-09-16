@@ -50,11 +50,8 @@ export default function App() {
         {/* 5. Klien & Mitra Kami (Our Clients) */}
         <ClientsSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} />
 
-        {/* 6. Kemudahan & Keunggulan Teknologi */}
-        <TechStackSection />
-
-        {/* 7. Tahapan Pengerjaan Proyek */}
-        <ProcessSection onOpenConsultation={() => handleOpenConsultation('Konsultasi Alur Pengerjaan')} />
+        {/* 6. Kemudahan & Keunggulan Teknologi
+        <TechStackSection /> */}
 
         {/* 8. Mengapa Memilih KPS Technology */}
         <WhyUsSection />
