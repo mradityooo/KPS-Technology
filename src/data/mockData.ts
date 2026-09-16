@@ -102,61 +102,25 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const PORTFOLIO_DATA: PortfolioProject[] = [
   {
     id: 'katalog-umkm',
-    title: 'Website Profil & Katalog Digital Bisnis',
-    client: 'Usaha Retail & Manufaktur Lokal',
+    title: 'Iconet Intership Attendance',
+    client: 'Iconet',
     category: 'web',
-    summary: 'Pembuatan website profil perusahaan modern dilengkapi etalase katalog produk interaktif dengan tombol langsung terhubung ke admin WhatsApp penjualan.',
-    challenge: 'Sebelumnya promosi hanya lewat media sosial, pelanggan sering bingung melihat daftar produk lengkap dan harga resmi.',
-    solution: 'Membangun website katalog berkecepatan tinggi, ringan dibuka di HP, dan memudahkan calon pembeli memilih produk serta langsung memesan ke WhatsApp.',
-    metrics: [
-      { label: 'Kecepatan Web', value: '1.2 Detik' },
-      { label: 'Peningkatan Chat WA', value: '+75%' },
-      { label: 'Tampilan HP', value: '100% Responsif' }
+    summary: 'Platform absensi digital untuk mahasiswa magang yang membantu pencatatan dan monitoring kehadiran secara praktis, terstruktur, dan terpusat.',
+    challenge: 'Proses pencatatan kehadiran mahasiswa magang membutuhkan sistem yang lebih terstruktur agar data absensi mudah dicatat, dipantau, dan dikelola.',
+    solution: 'Membangun sistem absensi digital yang memudahkan mahasiswa melakukan pencatatan kehadiran serta membantu admin memantau dan mengelola data absensi secara terpusat.',
+    features: [
+      'Absensi digital untuk mahasiswa magang',
+      'Monitoring kehadiran secara real-time',
+      'Dashboard admin untuk mengelola data kehadiran',
+      'Rekap data absensi yang terstruktur',
+      'Tampilan responsif untuk desktop dan mobile'
     ],
     tags: ['Next.js', 'Tailwind CSS', 'WhatsApp Order', 'SEO Lokal'],
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80',
+    imageUrl: '/portofolio-iconet.jpg',
     imageGradient: 'from-blue-900 to-slate-900',
     architectureHighlight: 'Fast Static Generation + Tombol Order Otomatis',
     completionYear: '2025'
   },
-  {
-    id: 'sistem-kasir-toko',
-    title: 'Aplikasi Web Kasir & Stok Barang Toko',
-    client: 'Toko Perlengkapan & Grosir',
-    category: 'enterprise',
-    summary: 'Sistem pencatatan penjualan kasir (POS), stok inventori barang masuk/keluar, serta rekap laba kotor harian yang dapat diakses pemilik dari rumah.',
-    challenge: 'Stok barang sering selisih karena pencatatan manual di buku kasir, dan pemilik toko kesulitan mengecek rekap penjualan saat di luar kota.',
-    solution: 'Merancang aplikasi web kasir berbasis cloud yang simpel, mudah dipelajari kasir dalam 1 hari, dan bisa dibuka pemilik lewat browser HP secara real-time.',
-    metrics: [
-      { label: 'Akurasi Stok', value: '99.5%' },
-      { label: 'Waktu Input Kasir', value: '15 Detik' },
-      { label: 'Pantau dari HP', value: 'Real-time' }
-    ],
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Cloud POS'],
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=800&auto=format&fit=crop&q=80',
-    imageGradient: 'from-indigo-900 to-slate-900',
-    architectureHighlight: 'Cloud POS Ringan + Cetak Struk Bluetooth',
-    completionYear: '2025'
-  },
-  {
-    id: 'web-company-jasa',
-    title: 'Website Profil Jasa & Konsultansi Profesional',
-    client: 'Firma Layanan Jasa & Legalitas',
-    category: 'web',
-    summary: 'Landing page dan website profil elegan dengan form konsultasi otomatis, kalkulator estimasi layanan, dan integrasi Google Maps.',
-    challenge: 'Website lama tampilannya kaku, tidak mobile-friendly, dan sering error saat dibuka dari smartphone klien.',
-    solution: 'Desain ulang total dengan nuansa biru navy elegan, tipografi bersih, copywriting profesional, dan struktur menu yang jelas.',
-    metrics: [
-      { label: 'Peringkat Google', value: 'Halaman 1' },
-      { label: 'Kredibilitas', value: 'Sangat Tinggi' },
-      { label: 'Konversi Prospek', value: '+60%' }
-    ],
-    tags: ['Tailwind CSS', 'React', 'SEO Friendly', 'Fast Load'],
-    imageUrl: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&auto=format&fit=crop&q=80',
-    imageGradient: 'from-blue-950 to-slate-900',
-    architectureHighlight: 'Clean Design + Struktur SEO Teroptimasi',
-    completionYear: '2024'
-  }
 ];
 
 export const TECH_BENEFITS: TechBenefitItem[] = [

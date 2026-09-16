@@ -7,6 +7,7 @@ import {
   Clock,
   Sparkles
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface HeroSectionProps {
   onOpenConsultation: (topic?: string) => void;
@@ -69,7 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                 id="hero-cta-whatsapp"
                 className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-xs transition-colors"
               >
-                <MessageSquare className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4" />
                 <span>WhatsApp</span>
               </a>
 

@@ -18,7 +18,7 @@ export interface PortfolioProject {
   summary: string;
   challenge: string;
   solution: string;
-  metrics: { label: string; value: string }[];
+  features: string[];
   tags: string[];
   imageUrl?: string;
   imageGradient: string;

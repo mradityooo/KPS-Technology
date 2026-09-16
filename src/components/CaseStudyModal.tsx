@@ -72,14 +72,21 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {/* Key Impact Metrics */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-teal-700" />
-              <span>Dampak Bisnis & Hasil Terukur</span>
+              <CheckCircle2 className="w-4 h-4 text-teal-700" />
+              <span>Fitur & Keunggulan Sistem</span>
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {project.metrics.map((m, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center sm:text-left">
-                  <p className="text-2xl font-extrabold text-[#0f4c5c] font-['Outfit']">{m.value}</p>
-                  <p className="text-xs text-slate-600 mt-1 font-medium">{m.label}</p>
+
+            <div className="space-y-2">
+              {project.features?.map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+
+                  <p className="text-xs text-slate-700 font-medium leading-relaxed">
+                    {feature}
+                  </p>
                 </div>
               ))}
             </div>
