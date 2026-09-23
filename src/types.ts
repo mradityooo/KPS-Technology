@@ -10,11 +10,13 @@ export interface ServiceItem {
   badge?: string;
 }
 
+
 export interface PortfolioProject {
   id: string;
   title: string;
   client: string;
   category: 'web' | 'mobile' | 'enterprise' | 'cloud';
+  websiteUrl?: string;
   summary: string;
   challenge: string;
   solution: string;

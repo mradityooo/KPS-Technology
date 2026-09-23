@@ -45,7 +45,7 @@ export default function App() {
         <PortfolioSection onConsultProject={(projectTitle) => handleOpenConsultation(`Studi Kasus: ${projectTitle}`)} />
 
         {/* 4. Struktur Karyawan */}
-        <TeamSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} />
+        {/* <TeamSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} /> */}
 
         {/* 5. Klien & Mitra Kami (Our Clients) */}
         <ClientsSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} />

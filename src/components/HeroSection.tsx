@@ -73,13 +73,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                 <FaWhatsapp className="w-4 h-4" />
                 <span>WhatsApp</span>
               </a>
-
-              <a
-                href="#portofolio"
-                className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm transition-colors"
-              >
-                Lihat Portofolio
-              </a>
             </div>
           </div>
 

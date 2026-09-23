@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
-              Mitra pembuatan website profil bisnis, toko online, aplikasi mobile, dan sistem bisnis kustom. Kami hadir membantu bisnis Anda tampil profesional dengan komunikasi langsung, transparan, dan bergaransi.
+               Solusi website dan sistem digital untuk membantu bisnis Anda tampil lebih profesional.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-emerald-400 font-medium">
@@ -61,10 +61,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <li><a href="#beranda" className="hover:text-teal-300 transition-colors">Beranda</a></li>
               <li><a href="#layanan" className="hover:text-teal-300 transition-colors">Layanan Kami</a></li>
               <li><a href="#portofolio" className="hover:text-teal-300 transition-colors">Hasil Proyek</a></li>
-              <li><a href="#tim-kami" className="hover:text-teal-300 transition-colors">Tim Kami</a></li>
               <li><a href="#klien-kami" className="hover:text-teal-300 transition-colors">Klien Kami</a></li>
               <li><a href="#teknologi" className="hover:text-teal-300 transition-colors">Kemudahan</a></li>
-              <li><a href="#alur-kerja" className="hover:text-teal-300 transition-colors">Cara Kerja</a></li>
+              
               <li><a href="#faq" className="hover:text-teal-300 transition-colors">Tanya Jawab (FAQ)</a></li>
             </ul>
           </div>
@@ -75,12 +74,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               Layanan Utama
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
-              <li>Website Profil Usaha & Perusahaan</li>
-              <li>Website Toko Online & Integrasi WhatsApp</li>
+              <li>Website Profil & Perusahaan</li>
+              <li>Website Toko Online</li>
               <li>Sistem Kasir (POS) & Stok Gudang</li>
               <li>Aplikasi Mobile Android & iOS</li>
-              <li>Redesign & Optimalisasi Website Lama</li>
-              <li>Domain, Hosting Cepat & Bimbingan Pakai</li>
             </ul>
           </div>
 

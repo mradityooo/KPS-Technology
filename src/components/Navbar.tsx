@@ -5,6 +5,7 @@ import {
   MessageSquare, 
   ArrowRight 
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface NavbarProps {
   onOpenConsultation: (initialInterest?: string) => void;
@@ -26,10 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     { label: 'Beranda', href: '#beranda' },
     { label: 'Layanan', href: '#layanan' },
     { label: 'Portofolio', href: '#portofolio' },
-    { label: 'Tim', href: '#tim-kami' },
     { label: 'Klien', href: '#klien-kami' },
-    { label: 'Kemudahan', href: '#teknologi' },
-    { label: 'Alur Kerja', href: '#alur-kerja' },
     { label: 'FAQ', href: '#faq' },
   ];
 
@@ -79,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             id="nav-whatsapp-btn"
             className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-emerald-700 hover:text-emerald-800 hover:bg-emerald-50 rounded-lg transition-colors border border-emerald-200"
           >
-            <MessageSquare className="w-3.5 h-3.5" />
+            <FaWhatsapp className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
           </a>
 
@@ -102,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             className="p-2 rounded-lg bg-emerald-600 text-white text-xs flex items-center justify-center shadow-xs"
             aria-label="Chat WhatsApp"
           >
-            <MessageSquare className="w-4 h-4 fill-white" />
+            <FaWhatsapp className="w-4 h-4 fill-white" />
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

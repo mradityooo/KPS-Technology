@@ -105,6 +105,9 @@ export const PORTFOLIO_DATA: PortfolioProject[] = [
     title: 'Iconet Intership Attendance',
     client: 'Iconet',
     category: 'web',
+
+    websiteUrl: 'https://alamat-website-kamu.com',
+
     summary: 'Platform absensi digital untuk mahasiswa magang yang membantu pencatatan dan monitoring kehadiran secara praktis, terstruktur, dan terpusat.',
     challenge: 'Proses pencatatan kehadiran mahasiswa magang membutuhkan sistem yang lebih terstruktur agar data absensi mudah dicatat, dipantau, dan dikelola.',
     solution: 'Membangun sistem absensi digital yang memudahkan mahasiswa melakukan pencatatan kehadiran serta membantu admin memantau dan mengelola data absensi secara terpusat.',
@@ -176,13 +179,7 @@ export const WORKFLOW_STEPS: ProcessStep[] = [
     description: 'Ceritakan ide, kebutuhan, atau kendala bisnis Anda via WhatsApp atau Google Meet. Kami bantu berikan rekomendasi solusi yang paling tepat sasaran.',
     keyOutputs: ['Rekomendasi Solusi', 'Diskusi Kebutuhan Fitur', 'Konsultasi 100% Gratis']
   },
-  {
-    stepNumber: '02',
-    title: 'Kesepakatan & Gambaran Desain',
-    duration: 'Tahap 2',
-    description: 'Setelah menyepakati fitur yang dibutuhkan, kami buatkan struktur halaman dan gambaran desain awal agar Anda tahu jelas bentuk sistem nantinya.',
-    keyOutputs: ['Rancangan Desain Awal', 'Daftar Fitur Final', 'Jadwal Pengerjaan Jelas']
-  },
+  
   {
     stepNumber: '03',
     title: 'Proses Pengerjaan (Development)',
@@ -217,26 +214,6 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     rating: 5,
     projectScope: 'Website Profil Perusahaan'
   },
-  {
-    id: 'testi-2',
-    name: 'Dewi Anggraeni',
-    role: 'Founder',
-    company: 'Klinik Cantik Sehat',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
-    quote: 'Pelayanan cepat dan ramah banget. Desainnya bersih, elegan, dan enak dibuka di HP. Klien kami bilang websitenya rapi dan gampang untuk booking jadwal treatment langsung ke admin.',
-    rating: 5,
-    projectScope: 'Landing Page & Booking Jadwal'
-  },
-  {
-    id: 'testi-3',
-    name: 'Rian Hidayat',
-    role: 'Pengelola',
-    company: 'Grosir Sembako Berkah',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
-    quote: 'Sistem kasir dan stok barang dari KPS Technology sangat membantu toko kami. Sekarang tidak pusing lagi menghitung stok akhir bulan karena semuanya sudah tercatat otomatis di sistem.',
-    rating: 5,
-    projectScope: 'Sistem Kasir & Stok Barang'
-  }
 ];
 
 // Struktur Tim Karyawan (Sederhana: Foto, Nama, Posisi)

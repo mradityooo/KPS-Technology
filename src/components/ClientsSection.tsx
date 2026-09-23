@@ -44,7 +44,7 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ onOpenConsultati
         </div>
 
         {/* Client Collaboration CTA Box */}
-        <div className="max-w-4xl mx-auto rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
+        {/* <div className="max-w-4xl mx-auto rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-base sm:text-lg font-bold text-slate-900 font-['Outfit']">
               Ingin Bisnis Anda Memiliki Website & Sistem Sendiri?
@@ -71,7 +71,7 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({ onOpenConsultati
               Konsultasi Proyek
             </button>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

@@ -3,28 +3,15 @@ import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/mockData';
 import { PortfolioProject } from '../types';
-import { CaseStudyModal } from './CaseStudyModal';
 import { WaveDivider } from './WaveDivider';  
 
 interface PortfolioSectionProps {
   onConsultProject: (title: string) => void;
 }
 
-export const FaqSection = () => {
-  return (
-    <section className="bg-white text-slate-900 relative overflow-hidden pb-0">
-      {/* Konten FAQ */}
-
-      {/* Gelombang transisi menyatu ke Footer gelap */}
-      <WaveDivider toColor="dark" toDark={true} className="h-14 sm:h-20 md:h-24" />
-    </section>
-  );
-};
-
-
 export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultProject }) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState<PortfolioProject | null>(null);
+  
 
   const filterTabs = [
     { id: 'all', label: 'Semua Proyek' },
@@ -128,11 +115,14 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultPro
               {/* Action Button */}
               <div className="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
                 <button
-                  onClick={() => setSelectedCaseStudy(project)}
-                  className="text-xs font-semibold text-[#0f4c5c] hover:text-[#0a3641] flex items-center gap-1"
+                  onClick={() => {
+                    if (project.websiteUrl) {
+                      window.open(project.websiteUrl, '_blank');
+                    }
+                  }}
+                  className="..."
                 >
-                  <span>Lihat Detail</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  Lihat Detail
                 </button>
                 <button
                   onClick={() => onConsultProject(project.title)}
@@ -147,15 +137,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultPro
 
       </div>
 
-      {/* Case Study Detail Modal */}
-      <CaseStudyModal
-        project={selectedCaseStudy}
-        onClose={() => setSelectedCaseStudy(null)}
-        onConsultProject={(projectName) => {
-          onSelectProject(`Studi kasus: ${projectName}`);
-          setSelectedCaseStudy(null);
-        }}
-      />
     </section>
   );
 };
