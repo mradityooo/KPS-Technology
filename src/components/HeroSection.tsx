@@ -81,7 +81,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-xs">
               <div className="flex items-center justify-between pb-4 border-b border-slate-200 mb-5">
                 <div>
-                  <span className="text-[11px] font-semibold text-teal-800 uppercase tracking-wider block font-['Outfit']">
+                  <span className="text-[11px] font-semibold text-teal-800 uppercase tracking-normal block font-['Outfit']">
                     Spesifikasi Layanan
                   </span>
                   <h3 className="text-base font-bold text-slate-900 font-['Outfit'] mt-0.5">

@@ -63,7 +63,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         {/* Header - Rata Kiri Konsisten dengan Seluruh Halaman Lain */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200">
           <div>
-            <span className="text-xs font-bold text-teal-800 uppercase tracking-wider block font-['Outfit'] mb-1">
+            <span className="text-xs font-bold text-teal-800 uppercase tracking-normal block font-['Outfit'] mb-1">
               Layanan Kami
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Outfit'] tracking-tight">

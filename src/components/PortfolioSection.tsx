@@ -31,7 +31,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultPro
         {/* Section Header - Left Aligned */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-4 border-b border-slate-200">
           <div>
-            <span className="text-xs font-bold text-teal-800 uppercase tracking-wider block font-['Outfit'] mb-1">
+            <span className="text-xs font-bold text-teal-800 uppercase tracking-normal block font-['Outfit'] mb-1">
               Portofolio Proyek
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-['Outfit'] tracking-tight">
@@ -120,7 +120,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onConsultPro
                       window.open(project.websiteUrl, '_blank');
                     }
                   }}
-                  className="..."
+                  className="text-xs font-medium text-slate-500 hover:text-slate-900"
                 >
                   Lihat Detail
                 </button>

@@ -111,12 +111,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                 </a>
               </div>
               <div className="pt-2">
-                <button
-                  onClick={onOpenConsultation}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0f4c5c] hover:bg-[#0b3844] text-white font-semibold text-xs transition-colors text-center"
-                >
-                  Mulai Konsultasi Gratis
-                </button>
               </div>
             </div>
           </div>
