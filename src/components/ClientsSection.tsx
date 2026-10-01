@@ -7,28 +7,25 @@ interface ClientsSectionProps {
 }
 
 export const ClientsSection: React.FC<ClientsSectionProps> = ({
-  onOpenConsultation
+  onOpenConsultation,
 }) => {
   return (
     <section
       id="klien-kami"
-      className="py-16 sm:py-24 bg-slate-50 text-slate-900 relative border-b border-slate-200 overflow-hidden"
+      className="py-16 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: 'easeOut'
-          }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200"
         >
           <div>
-            <span className="text-xs font-bold text-teal-800 uppercase tracking-normal block font-['Outfit'] mb-0">
+            <span className="text-xs font-bold text-teal-800 uppercase tracking-normal block font-['Outfit']">
               Mitra & Relasi
             </span>
 
@@ -37,7 +34,7 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({
             </h2>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed">
             Dipercaya oleh berbagai pelaku usaha dan instansi dalam digitalisasi
             operasional.
           </p>
@@ -52,11 +49,11 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.12
-              }
-            }
+                staggerChildren: 0.08,
+              },
+            },
           }}
-          className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:gap-7 max-w-5xl mx-auto mb-14"
+          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-8 sm:gap-x-12 sm:gap-y-10 lg:gap-x-16 max-w-5xl mx-auto"
         >
           {OUR_CLIENTS.map((client) => (
             <motion.div
@@ -64,34 +61,25 @@ export const ClientsSection: React.FC<ClientsSectionProps> = ({
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 20,
-                  scale: 0.95
+                  y: 12,
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
-                  scale: 1,
                   transition: {
-                    duration: 0.5,
-                    ease: 'easeOut'
-                  }
-                }
+                    duration: 0.4,
+                  },
+                },
               }}
-              whileHover={{
-                y: -5,
-                scale: 1.05
-              }}
-              transition={{
-                duration: 0.25,
-                ease: 'easeOut'
-              }}
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
               title={client.name}
-              className="w-40 h-24 flex items-center justify-center group"
+              className="w-36 sm:w-40 h-20 sm:h-24 flex items-center justify-center"
             >
               <img
                 src={client.logo}
                 alt={client.name}
-                className={`${client.logoClass} object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300`}
+                className={`${client.logoClass} object-contain opacity-75 hover:opacity-100 transition-opacity duration-200`}
               />
             </motion.div>
           ))}

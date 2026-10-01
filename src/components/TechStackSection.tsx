@@ -8,7 +8,7 @@ import {
   ShieldCheck,
   CheckCircle2,
   Sparkles,
-  Check
+  Check,
 } from 'lucide-react';
 import { TECH_BENEFITS } from '../data/mockData';
 
@@ -17,16 +17,22 @@ export const TechStackSection: React.FC = () => {
     switch (iconName) {
       case 'Zap':
         return <Zap className="w-5 h-5 text-amber-500" />;
+
       case 'Smartphone':
         return <Smartphone className="w-5 h-5 text-teal-700" />;
+
       case 'MessageSquare':
         return <MessageSquare className="w-5 h-5 text-emerald-600" />;
+
       case 'Sliders':
         return <Sliders className="w-5 h-5 text-indigo-600" />;
+
       case 'ShieldCheck':
         return <ShieldCheck className="w-5 h-5 text-[#0f4c5c]" />;
+
       case 'CheckCircle2':
         return <CheckCircle2 className="w-5 h-5 text-teal-600" />;
+
       default:
         return <Sparkles className="w-5 h-5 text-teal-700" />;
     }
@@ -35,19 +41,16 @@ export const TechStackSection: React.FC = () => {
   return (
     <section
       id="teknologi"
-      className="py-20 sm:py-24 bg-slate-50 text-slate-900 relative border-b border-slate-200 overflow-hidden"
+      className="py-20 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: 'easeOut'
-          }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200"
         >
           <div>
@@ -60,7 +63,7 @@ export const TechStackSection: React.FC = () => {
             </h2>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed">
             Sistem yang kami bangun dirancang praktis, ringan dibuka di HP,
             serta mudah dikelola oleh siapa saja tanpa keahlian teknis.
           </p>
@@ -75,9 +78,9 @@ export const TechStackSection: React.FC = () => {
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.1
-              }
-            }
+                staggerChildren: 0.08,
+              },
+            },
           }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
@@ -87,45 +90,30 @@ export const TechStackSection: React.FC = () => {
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 30
+                  y: 15,
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    duration: 0.55,
-                    ease: 'easeOut'
-                  }
-                }
+                    duration: 0.4,
+                  },
+                },
               }}
-              whileHover={{
-                y: -5
-              }}
-              transition={{
-                duration: 0.25,
-                ease: 'easeOut'
-              }}
-              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.2 }}
+              className="p-6 rounded-xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
             >
               <div>
 
                 {/* Icon & Badge */}
                 <div className="flex items-center justify-between mb-4">
 
-                  <motion.div
-                    whileHover={{
-                      scale: 1.08,
-                      rotate: 3
-                    }}
-                    transition={{
-                      duration: 0.25
-                    }}
-                    className="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-teal-50 group-hover:border-teal-100 transition-colors"
-                  >
+                  <div className="w-11 h-11 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center">
                     {getIcon(item.iconName)}
-                  </motion.div>
+                  </div>
 
-                  <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-teal-50 group-hover:text-teal-800 transition-colors">
+                  <span className="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-600">
                     Standar KPS
                   </span>
 
@@ -145,17 +133,8 @@ export const TechStackSection: React.FC = () => {
 
               {/* Value Point */}
               <div className="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-teal-800">
-
-                <motion.div
-                  whileHover={{
-                    scale: 1.15
-                  }}
-                >
-                  <Check className="w-4 h-4 text-teal-700 shrink-0" />
-                </motion.div>
-
+                <Check className="w-4 h-4 text-teal-700 shrink-0" />
                 <span>{item.tag}</span>
-
               </div>
 
             </motion.div>

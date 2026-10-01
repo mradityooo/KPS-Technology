@@ -8,7 +8,7 @@ interface PortfolioSectionProps {
 }
 
 export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
-  onConsultProject
+  onConsultProject,
 }) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
@@ -16,30 +16,29 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
     { id: 'all', label: 'Semua Proyek' },
     { id: 'enterprise', label: 'Sistem Informasi & ERP' },
     { id: 'mobile', label: 'Aplikasi Mobile (Android/iOS)' },
-    { id: 'web', label: 'Website & Toko Online' }
+    { id: 'web', label: 'Website & Toko Online' },
   ];
 
   const filteredProjects =
     activeCategory === 'all'
       ? PORTFOLIO_DATA
-      : PORTFOLIO_DATA.filter((p) => p.category === activeCategory);
+      : PORTFOLIO_DATA.filter(
+          (project) => project.category === activeCategory
+        );
 
   return (
     <section
       id="portofolio"
-      className="py-20 sm:py-24 bg-white text-slate-900 relative border-b border-slate-200"
+      className="py-20 sm:py-24 bg-white text-slate-900 border-b border-slate-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: 'easeOut'
-          }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-4 border-b border-slate-200"
         >
           <div>
@@ -52,32 +51,22 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
             </h2>
           </div>
 
-          {/* Filter Tabs */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.15
-            }}
-            className="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-200"
-          >
+          {/* Filter */}
+          <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1 rounded-lg border border-slate-200">
             {filterTabs.map((tab) => (
-              <motion.button
+              <button
                 key={tab.id}
                 onClick={() => setActiveCategory(tab.id)}
-                whileTap={{ scale: 0.96 }}
-                className={`px-3.5 py-2 text-xs font-semibold rounded-lg transition-all ${
+                className={`px-3 py-2 text-xs font-semibold rounded-md transition-colors ${
                   activeCategory === tab.id
-                    ? 'bg-[#0f4c5c] text-white shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+                    ? 'bg-[#0f4c5c] text-white'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200'
                 }`}
               >
                 {tab.label}
-              </motion.button>
+              </button>
             ))}
-          </motion.div>
+          </div>
         </motion.div>
 
         {/* Portfolio Cards */}
@@ -89,11 +78,11 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.1
-              }
-            }
+                staggerChildren: 0.08,
+              },
+            },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {filteredProjects.map((project) => (
             <motion.div
@@ -101,73 +90,40 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 30
+                  y: 15,
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    duration: 0.5,
-                    ease: 'easeOut'
-                  }
-                }
+                    duration: 0.4,
+                  },
+                },
               }}
-              whileHover={{
-                y: -6
-              }}
-              transition={{
-                duration: 0.25,
-                ease: 'easeOut'
-              }}
-              className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-lg hover:border-teal-500 transition-all duration-300 flex flex-col justify-between group"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col justify-between"
             >
               <div>
 
                 {/* Project Image */}
-                <div className="h-48 sm:h-52 w-full overflow-hidden bg-slate-100 relative">
-
-                  <motion.img
+                <div className="h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
+                  <img
                     src={
                       project.imageUrl ||
                       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80'
                     }
                     alt={project.title}
-                    whileHover={{
-                      scale: 1.07
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: 'easeOut'
-                    }}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                   />
-
-                  {/* Image Overlay */}
-                  <motion.div
-                    initial={{ opacity: 0.55 }}
-                    whileHover={{ opacity: 0.25 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent pointer-events-none"
-                  />
-
-                  {/* Small Category Label */}
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-sm text-[10px] font-semibold text-slate-700 border border-white/70">
-                      {project.category === 'enterprise'
-                        ? 'Sistem Informasi'
-                        : project.category === 'mobile'
-                        ? 'Mobile App'
-                        : 'Website'}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-6">
 
                   {/* Project Name */}
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 font-['Outfit'] mb-2.5 group-hover:text-[#0f4c5c] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 font-['Outfit'] mb-2.5 leading-snug hover:text-[#0f4c5c] transition-colors">
                     {project.title}
                   </h3>
 
@@ -178,31 +134,26 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
 
                   {/* Technologies */}
                   <div className="pt-3 border-t border-slate-100">
-
                     <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-2 font-['Outfit']">
                       Bahasa & Teknologi:
                     </span>
 
                     <div className="flex flex-wrap gap-1.5">
                       {project.tags.map((tag, idx) => (
-                        <motion.span
+                        <span
                           key={idx}
-                          whileHover={{
-                            y: -1
-                          }}
-                          className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200 transition-colors hover:border-slate-300"
+                          className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200"
                         >
                           {tag}
-                        </motion.span>
+                        </span>
                       ))}
                     </div>
-
                   </div>
                 </div>
               </div>
 
               {/* Action Footer */}
-              <div className="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
+              <div className="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-4">
 
                 {/* Lihat Detail */}
                 <button

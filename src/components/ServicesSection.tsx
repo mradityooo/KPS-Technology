@@ -25,8 +25,8 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
       'Website profil perusahaan & landing page responsif',
       'Desain modern, cepat dibuka, dan ramah SEO Google',
       'Integrasi tombol WhatsApp & formulir kontak langsung',
-      'Domain & cloud hosting berkecepatan tinggi'
-    ]
+      'Domain & cloud hosting berkecepatan tinggi',
+    ],
   },
   {
     id: 'mobile-dev',
@@ -38,8 +38,8 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
       'Aplikasi multi-platform Android & iOS hemat biaya',
       'Antarmuka nyaman dan navigasi simpel bagi pelanggan',
       'Dukungan fitur notifikasi pesan dan promo',
-      'Pendampingan rilis resmi di Google Play Store'
-    ]
+      'Pendampingan rilis resmi di Google Play Store',
+    ],
   },
   {
     id: 'system-dev',
@@ -51,29 +51,30 @@ const FEATURED_SERVICES: ServiceVodjoItem[] = [
       'Pencatatan transaksi kasir & cetak struk otomatis',
       'Pengelolaan stok barang masuk dan keluar',
       'Laporan penjualan dan omzet secara otomatis',
-      'Dapat diakses dari HP, laptop, maupun komputer toko'
-    ]
-  }
+      'Dapat diakses dari HP, laptop, maupun komputer toko',
+    ],
+  },
 ];
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({
-  onSelectService
+  onSelectService,
 }) => {
-  const [activeModal, setActiveModal] = useState<ServiceVodjoItem | null>(null);
+  const [activeModal, setActiveModal] =
+    useState<ServiceVodjoItem | null>(null);
 
   return (
     <section
       id="layanan"
-      className="py-16 sm:py-20 bg-slate-50 text-slate-900 relative border-b border-slate-200"
+      className="py-16 sm:py-20 bg-slate-50 text-slate-900 border-b border-slate-200"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200"
         >
           <div>
@@ -86,7 +87,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             </h2>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed">
             Kepuasan klien adalah prioritas kami dalam menghadirkan sistem web,
             aplikasi seluler, dan otomasi yang handal.
           </p>
@@ -101,9 +102,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.15
-              }
-            }
+                staggerChildren: 0.1,
+              },
+            },
           }}
           className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6"
         >
@@ -113,44 +114,29 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 35
+                  y: 20,
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    duration: 0.6,
-                    ease: 'easeOut'
-                  }
-                }
+                    duration: 0.5,
+                  },
+                },
               }}
-              whileHover={{
-                y: -6
-              }}
-              transition={{
-                duration: 0.25,
-                ease: 'easeOut'
-              }}
-              className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col justify-between shadow-xs hover:shadow-lg hover:border-teal-400 transition-all duration-300 group"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200"
             >
               <div>
 
                 {/* Mockup */}
-                <div className="w-full h-40 sm:h-44 rounded-xl bg-[#0b1016] border border-slate-800/80 flex items-center justify-center p-2 mb-4 overflow-hidden group-hover:border-slate-700 transition-colors">
-
-                  <motion.img
+                <div className="w-full h-40 sm:h-44 rounded-lg bg-[#0b1016] border border-slate-800 flex items-center justify-center p-2 mb-4 overflow-hidden">
+                  <img
                     src={service.image}
                     alt={service.title}
-                    whileHover={{
-                      scale: 1.06
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      ease: 'easeOut'
-                    }}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-transform duration-300 hover:scale-[1.02]"
                   />
-
                 </div>
 
                 {/* Title */}
@@ -164,25 +150,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 </p>
               </div>
 
-              {/* Action Button */}
+              {/* Action */}
               <div className="pt-2">
                 <button
                   onClick={() => setActiveModal(service)}
                   id={`btn-learn-more-${service.id}`}
-                  className="w-full sm:w-auto px-5 py-2 rounded-full border border-slate-300 hover:border-[#0f4c5c] hover:bg-[#0f4c5c] text-slate-700 hover:text-white text-xs font-semibold tracking-wide transition-all duration-200 text-center flex items-center justify-center gap-1.5"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-lg border border-slate-300 hover:border-[#0f4c5c] hover:bg-[#0f4c5c] text-slate-700 hover:text-white text-xs font-semibold transition-colors duration-200 text-center flex items-center justify-center gap-1.5"
                 >
                   <span>Pelajari Lebih Lanjut</span>
-
-                  <motion.span
-                    animate={{ x: [0, 3, 0] }}
-                    transition={{
-                      duration: 1.6,
-                      repeat: Infinity,
-                      ease: 'easeInOut'
-                    }}
-                  >
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </motion.span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </motion.div>
@@ -193,29 +169,28 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
       {/* Modal Detail Layanan */}
       <AnimatePresence>
         {activeModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
-
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            onClick={() => setActiveModal(null)}
+          >
             <motion.div
               initial={{
                 opacity: 0,
-                scale: 0.92,
-                y: 20
+                y: 15,
               }}
               animate={{
                 opacity: 1,
-                scale: 1,
-                y: 0
+                y: 0,
               }}
               exit={{
                 opacity: 0,
-                scale: 0.92,
-                y: 20
+                y: 10,
               }}
               transition={{
-                duration: 0.25,
-                ease: 'easeOut'
+                duration: 0.2,
               }}
-              className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-7 shadow-xl border border-slate-200 text-slate-900 relative"
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-xl max-w-lg w-full p-6 sm:p-7 shadow-xl border border-slate-200 text-slate-900 relative max-h-[90vh] overflow-y-auto"
             >
 
               {/* Close */}
@@ -227,20 +202,24 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="pr-4">
+              <div className="pr-8">
 
+                {/* Label */}
                 <span className="text-[11px] font-bold text-teal-800 uppercase tracking-wider block mb-1">
                   Detail Layanan
                 </span>
 
+                {/* Title */}
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-['Outfit'] mb-2">
                   {activeModal.title}
                 </h3>
 
+                {/* Description */}
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
                   {activeModal.shortDesc}
                 </p>
 
+                {/* Features */}
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2.5">
                   Cakupan Fasilitas & Fitur:
                 </h4>
@@ -249,16 +228,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   {activeModal.features.map((feature, idx) => (
                     <motion.div
                       key={idx}
-                      initial={{
-                        opacity: 0,
-                        x: -10
-                      }}
-                      animate={{
-                        opacity: 1,
-                        x: 0
-                      }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       transition={{
-                        delay: idx * 0.07
+                        delay: idx * 0.04,
                       }}
                       className="flex items-start gap-2.5 text-xs text-slate-700"
                     >
@@ -268,7 +241,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                   ))}
                 </div>
 
-                <div className="flex items-center gap-3">
+                {/* Actions */}
+                <div className="flex flex-col sm:flex-row items-stretch gap-3">
 
                   <button
                     onClick={() => {
@@ -276,7 +250,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                       setActiveModal(null);
                       onSelectService(title);
                     }}
-                    className="w-full py-2.5 rounded-xl bg-[#0f4c5c] hover:bg-[#0b3844] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-xs"
+                    className="flex-1 py-2.5 rounded-lg bg-[#0f4c5c] hover:bg-[#0b3844] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
                   >
                     <span>Pilih Layanan Ini</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -284,7 +258,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
                   <button
                     onClick={() => setActiveModal(null)}
-                    className="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition-colors"
+                    className="py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium transition-colors"
                   >
                     Tutup
                   </button>
