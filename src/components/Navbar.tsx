@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
 
         {/* Action CTAs */}
         <div className="hidden sm:flex items-center gap-3">
-          <a
+          {/* <a
             href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20tertarik%20konsultasi%20website"
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           >
             <FaWhatsapp className="w-3.5 h-3.5" />
             <span>WhatsApp</span>
-          </a>
+          </a> */}
 
           <button
             onClick={() => onOpenConsultation()}

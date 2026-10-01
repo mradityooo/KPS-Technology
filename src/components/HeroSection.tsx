@@ -77,7 +77,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
           </div>
 
           {/* Right Visual / Summary Card - Clean Real Engineering Spec */}
-          <div className="lg:col-span-5">
+          {/* <div className="lg:col-span-5">
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-xs">
               <div className="flex items-center justify-between pb-4 border-b border-slate-200 mb-5">
                 <div>
@@ -135,7 +135,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenConsultation }) 
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
 
