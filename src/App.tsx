@@ -1,4 +1,4 @@
-/**
+ /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -8,10 +8,7 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { ServicesSection } from './components/ServicesSection';
 import { PortfolioSection } from './components/PortfolioSection';
-import { TeamSection } from './components/TeamSection';
 import { ClientsSection } from './components/ClientsSection';
-import { TechStackSection } from './components/TechStackSection';
-import { ProcessSection } from './components/ProcessSection';
 import { WhyUsSection } from './components/WhyUsSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
@@ -30,43 +27,59 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-[#0f4c5c] selection:text-white font-['Plus_Jakarta_Sans',sans-serif]">
-      {/* Top Navbar */}
+
+      {/* Navbar */}
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
-      {/* Main Content Sections */}
       <main>
-        {/* 1. Hero Section with Corporate Software Showcase & Value Props */}
-        <HeroSection onOpenConsultation={() => handleOpenConsultation('Konsultasi Kebutuhan Software')} />
 
-        {/* 2. Layanan Software House Resmi */}
-        <ServicesSection onSelectService={(serviceTitle) => handleOpenConsultation(serviceTitle)} />
+        {/* 1. Hero */}
+        <HeroSection
+          onOpenConsultation={() =>
+            handleOpenConsultation('Konsultasi Kebutuhan Software')
+          }
+        />
 
-        {/* 3. Portofolio Proyek Nyata Instansi & Bisnis */}
-        <PortfolioSection onConsultProject={(projectTitle) => handleOpenConsultation(`Studi Kasus: ${projectTitle}`)} />
+        {/* 2. Layanan */}
+        <ServicesSection
+          onSelectService={(serviceTitle) =>
+            handleOpenConsultation(serviceTitle)
+          }
+        />
 
-        {/* 4. Struktur Karyawan */}
-        {/* <TeamSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} /> */}
+        {/* 3. Portofolio */}
+        <PortfolioSection
+          onConsultProject={(projectTitle) =>
+            handleOpenConsultation(`Studi Kasus: ${projectTitle}`)
+          }
+        />
 
-        {/* 5. Klien & Mitra Kami (Our Clients) */}
-        <ClientsSection onOpenConsultation={(topic) => handleOpenConsultation(topic)} />
+        {/* 4. Klien & Mitra */}
+        <ClientsSection
+          onOpenConsultation={(topic) =>
+            handleOpenConsultation(topic)
+          }
+        />
 
-        {/* 6. Kemudahan & Keunggulan Teknologi
-        <TechStackSection /> */}
-
-        {/* 8. Mengapa Memilih KPS Technology */}
+        {/* 5. Mengapa KPS */}
         <WhyUsSection />
 
-        {/* 9. Testimoni Klien */}
+        {/* 6. Testimoni */}
         <TestimonialsSection />
 
-        {/* 10. Pertanyaan Umum (FAQ) */}
+        {/* 7. FAQ */}
         <FaqSection />
+
       </main>
 
-      {/* Corporate Footer */}
-      <Footer onOpenConsultation={() => handleOpenConsultation('Footer CTA')} />
+      {/* Footer */}
+      <Footer
+        onOpenConsultation={() =>
+          handleOpenConsultation('Footer CTA')
+        }
+      />
 
-      {/* Floating WhatsApp Quick Consultation Button */}
+      {/* Floating WhatsApp */}
       <FloatingWhatsApp />
 
       {/* Consultation Modal */}
@@ -75,6 +88,7 @@ export default function App() {
         onClose={() => setIsConsultationOpen(false)}
         initialTopic={consultationTopic}
       />
+
     </div>
   );
 }
