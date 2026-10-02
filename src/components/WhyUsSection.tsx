@@ -4,7 +4,7 @@ import {
   Lock,
   Clock,
   Headphones,
-  ShieldCheck
+  ShieldCheck,
 } from 'lucide-react';
 
 export const WhyUsSection: React.FC = () => {
@@ -12,36 +12,33 @@ export const WhyUsSection: React.FC = () => {
     {
       icon: Lock,
       title: '100% Hak Milik Anda',
-      desc: 'Domain, hosting, dan file website diserahkan penuh kepada Anda tanpa ikatan sewa bulanan.'
+      desc: 'Domain, hosting, dan file website diserahkan penuh kepada Anda tanpa ikatan sewa bulanan.',
     },
     {
       icon: Clock,
       title: 'Pengerjaan Tepat Waktu',
-      desc: 'Website profil selesai dalam 5-10 hari kerja dengan jadwal pengerjaan yang terencana.'
+      desc: 'Website profil selesai dalam 5-10 hari kerja dengan jadwal pengerjaan yang terencana.',
     },
     {
       icon: Headphones,
       title: 'Garansi & Bantuan Cepat',
-      desc: 'Garansi perbaikan gratis jika terjadi kendala teknis dan siap konsultasi kapan saja lewat WA.'
-    }
+      desc: 'Garansi perbaikan gratis jika terjadi kendala teknis dan siap konsultasi kapan saja lewat WA.',
+    },
   ];
 
   return (
     <section
       id="kenapa-kami"
-      className="py-20 sm:py-24 bg-white text-slate-900 relative border-b border-slate-200 overflow-hidden"
+      className="py-20 sm:py-24 bg-white text-slate-900 border-b border-slate-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.6,
-            ease: 'easeOut'
-          }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-slate-200"
         >
           <div>
@@ -54,7 +51,7 @@ export const WhyUsSection: React.FC = () => {
             </h2>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-600 max-w-md leading-relaxed">
             Komitmen transparansi tanpa biaya tersembunyi, komunikasi langsung
             tanpa sales, dan garansi pendampingan penuh.
           </p>
@@ -69,9 +66,9 @@ export const WhyUsSection: React.FC = () => {
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.15
-              }
-            }
+                staggerChildren: 0.08,
+              },
+            },
           }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14"
         >
@@ -84,41 +81,26 @@ export const WhyUsSection: React.FC = () => {
                 variants={{
                   hidden: {
                     opacity: 0,
-                    y: 35
+                    y: 15,
                   },
                   visible: {
                     opacity: 1,
                     y: 0,
                     transition: {
-                      duration: 0.6,
-                      ease: 'easeOut'
-                    }
-                  }
+                      duration: 0.4,
+                    },
+                  },
                 }}
-                whileHover={{
-                  y: -6
-                }}
-                transition={{
-                  duration: 0.25,
-                  ease: 'easeOut'
-                }}
-                className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-lg transition-all duration-300 group"
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.2 }}
+                className="p-6 rounded-xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all duration-200"
               >
                 <div className="flex items-center gap-3 mb-5">
 
                   {/* Icon */}
-                  <motion.div
-                    whileHover={{
-                      scale: 1.08,
-                      rotate: 2
-                    }}
-                    transition={{
-                      duration: 0.25
-                    }}
-                    className="w-11 h-11 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors"
-                  >
+                  <div className="w-11 h-11 rounded-lg bg-teal-50 text-teal-700 border border-teal-100 flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5" />
-                  </motion.div>
+                  </div>
 
                   {/* Title */}
                   <h3 className="text-base font-bold text-slate-900 font-['Outfit']">
@@ -137,40 +119,19 @@ export const WhyUsSection: React.FC = () => {
 
         {/* Guarantee Banner */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 35
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0
-          }}
-          viewport={{
-            once: true,
-            amount: 0.2
-          }}
-          transition={{
-            duration: 0.7,
-            ease: 'easeOut'
-          }}
-          className="p-6 sm:p-8 rounded-2xl bg-[#0f4c5c] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="p-6 sm:p-8 rounded-xl bg-[#0f4c5c] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm"
         >
 
           {/* Banner Content */}
           <div className="flex items-start gap-4">
 
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: 0.2
-              }}
-              className="w-12 h-12 rounded-xl bg-teal-700/60 border border-teal-400/30 flex items-center justify-center shrink-0 text-white"
-            >
-              <ShieldCheck className="w-6 h-6" />
-            </motion.div>
+            <div className="w-11 h-11 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center shrink-0 text-white">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
 
             <div>
               <h3 className="text-base sm:text-lg font-bold font-['Outfit']">
@@ -191,14 +152,9 @@ export const WhyUsSection: React.FC = () => {
             href="https://wa.me/6285117057996?text=Halo%20KPS%20Technology,%20saya%20ingin%20tanya%20mengenai%20garansi%20dan%20pembuatan%20website"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{
-              y: -2,
-              scale: 1.02
-            }}
-            whileTap={{
-              scale: 0.98
-            }}
-            className="shrink-0 w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-[#0f4c5c] hover:bg-teal-50 font-bold text-xs sm:text-sm transition-all shadow-sm text-center"
+            whileHover={{ y: -2 }}
+            whileTap={{ y: 0 }}
+            className="shrink-0 w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-[#0f4c5c] hover:bg-teal-50 font-bold text-xs sm:text-sm transition-colors shadow-sm text-center"
           >
             Konsultasi Sekarang
           </motion.a>
