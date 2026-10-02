@@ -11,6 +11,7 @@ import {
   Check,
 } from 'lucide-react';
 import { TECH_BENEFITS } from '../data/mockData';
+import { WaveDivider } from './WaveDivider';
 
 export const TechStackSection: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -41,7 +42,7 @@ export const TechStackSection: React.FC = () => {
   return (
     <section
       id="teknologi"
-      className="py-20 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200"
+       className="relative py-20 sm:py-24 bg-white text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -140,8 +141,11 @@ export const TechStackSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
+      <WaveDivider
+        fromColor="#ffffff"
+        toColor="#f8fafc"
+      />
     </section>
   );
 };

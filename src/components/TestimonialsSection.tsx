@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { TESTIMONIALS_DATA } from '../data/mockData';
 import { Star } from 'lucide-react';
+import { WaveDivider } from './WaveDivider';
 
 export const TestimonialsSection: React.FC = () => {
   return (
     <section
-      className="py-20 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200"
+      className="relative py-20 sm:py-24 bg-white text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -126,8 +127,12 @@ export const TestimonialsSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
+      <WaveDivider
+        fromColor="#f8fafc"
+        toColor="#ffffff"
+      />
     </section>
+    
   );
 };

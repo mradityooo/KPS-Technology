@@ -30,7 +30,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
   return (
     <section
       id="portofolio"
-      className="py-20 sm:py-24 bg-white text-slate-900"
+      className="relative py-20 sm:py-24 bg-white text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -182,7 +182,10 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
           ))}
         </motion.div>
       </div>
-      <WaveDivider color='f8fafc' />
+      <WaveDivider
+        fromColor="#f8fafc"
+        toColor="#ffffff"
+      />
     </section>
   );
 };

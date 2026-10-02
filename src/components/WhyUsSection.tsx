@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { WaveDivider } from './WaveDivider';
 import {
   Lock,
   Clock,
@@ -29,7 +30,7 @@ export const WhyUsSection: React.FC = () => {
   return (
     <section
       id="kenapa-kami"
-      className="py-20 sm:py-24 bg-white text-slate-900 border-b border-slate-200"
+      className="relative py-20 sm:py-24 bg-slate-50 text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -160,8 +161,12 @@ export const WhyUsSection: React.FC = () => {
           </motion.a>
 
         </motion.div>
-
       </div>
+      <WaveDivider
+        fromColor="#f8fafc"
+        toColor="#ffffff"
+        flip
+      />
     </section>
   );
 };

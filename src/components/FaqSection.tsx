@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { FAQ_DATA } from '../data/mockData';
 import { ChevronDown } from 'lucide-react';
+import { WaveDivider } from './WaveDivider';
 
 export const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -13,7 +14,7 @@ export const FaqSection: React.FC = () => {
   return (
     <section
       id="faq"
-      className="py-20 sm:py-24 bg-white text-slate-900 border-b border-slate-200"
+        className="relative py-20 sm:py-24 bg-slate-50 text-slate-900"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -149,8 +150,11 @@ export const FaqSection: React.FC = () => {
             );
           })}
         </motion.div>
-
       </div>
+      <WaveDivider
+        fromColor="#0a272e"
+        toColor="#f8fafc"
+      />
     </section>
   );
 };

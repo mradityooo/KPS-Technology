@@ -66,7 +66,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   return (
     <section
       id="layanan"
-      className="py-16 sm:py-20 bg-slate-50 text-slate-900"
+      className="relative py-16 sm:py-20 pb-24 bg-slate-50 text-slate-900"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -270,7 +270,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </div>
         )}
       </AnimatePresence>
-      <WaveDivider color='#ffffff' flip />
+      <WaveDivider
+        fromColor="#f8fafc"
+        toColor="#ffffff"
+        flip
+      />
     </section>
   );
 };
