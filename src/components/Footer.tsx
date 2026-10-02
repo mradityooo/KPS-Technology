@@ -205,7 +205,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
                   href="mailto:halo@kpstechnology.id"
                   className="hover:text-white transition-colors"
                 >
-                  halo@kpstechnology.id
+                  kps.techology@gmail.com
                 </a>
               </div>
 
