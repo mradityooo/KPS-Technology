@@ -5,7 +5,7 @@ import {
   ArrowUp,
   ShieldCheck,
   MessageSquare,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 interface FooterProps {
@@ -16,13 +16,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
   return (
-    <footer className="bg-[#0a272e] text-slate-300 border-t border-teal-900/60 relative overflow-hidden">
-
+    <footer className="bg-[#0a272e] text-slate-300 border-t border-teal-900/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
 
         {/* Main Footer Content */}
@@ -31,15 +30,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
           whileInView="visible"
           viewport={{
             once: true,
-            amount: 0.1
+            amount: 0.1,
           }}
           variants={{
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.12
-              }
-            }
+                staggerChildren: 0.08,
+              },
+            },
           }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-teal-900/50"
         >
@@ -49,15 +48,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             variants={{
               hidden: {
                 opacity: 0,
-                y: 20
+                y: 15,
               },
               visible: {
                 opacity: 1,
-                y: 0
-              }
+                y: 0,
+              },
             }}
             transition={{
-              duration: 0.5
+              duration: 0.4,
             }}
             className="lg:col-span-4 space-y-4"
           >
@@ -87,16 +86,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-emerald-400 font-medium">
-              <motion.span
-                animate={{
-                  opacity: [1, 0.5, 1]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity
-                }}
-                className="w-2 h-2 rounded-full bg-emerald-400"
-              />
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
 
               <span>
                 Konsultasi & Diskusi Kebutuhan 100% Gratis
@@ -109,15 +99,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             variants={{
               hidden: {
                 opacity: 0,
-                y: 20
+                y: 15,
               },
               visible: {
                 opacity: 1,
-                y: 0
-              }
+                y: 0,
+              },
             }}
             transition={{
-              duration: 0.5
+              duration: 0.4,
             }}
             className="lg:col-span-2 space-y-3"
           >
@@ -126,31 +116,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </h4>
 
             <ul className="space-y-2 text-xs text-slate-300">
-
               {[
                 ['Beranda', '#beranda'],
                 ['Layanan Kami', '#layanan'],
                 ['Hasil Proyek', '#portofolio'],
                 ['Klien Kami', '#klien-kami'],
                 ['Kemudahan', '#teknologi'],
-                ['Tanya Jawab (FAQ)', '#faq']
+                ['Tanya Jawab (FAQ)', '#faq'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <motion.a
+                  <a
                     href={href}
-                    whileHover={{
-                      x: 3
-                    }}
-                    transition={{
-                      duration: 0.2
-                    }}
-                    className="inline-block hover:text-teal-300 transition-colors"
+                    className="hover:text-teal-300 transition-colors"
                   >
                     {label}
-                  </motion.a>
+                  </a>
                 </li>
               ))}
-
             </ul>
           </motion.div>
 
@@ -159,15 +141,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             variants={{
               hidden: {
                 opacity: 0,
-                y: 20
+                y: 15,
               },
               visible: {
                 opacity: 1,
-                y: 0
-              }
+                y: 0,
+              },
             }}
             transition={{
-              duration: 0.5
+              duration: 0.4,
             }}
             className="lg:col-span-3 space-y-3"
           >
@@ -188,15 +170,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             variants={{
               hidden: {
                 opacity: 0,
-                y: 20
+                y: 15,
               },
               visible: {
                 opacity: 1,
-                y: 0
-              }
+                y: 0,
+              },
             }}
             transition={{
-              duration: 0.5
+              duration: 0.4,
             }}
             className="lg:col-span-3 space-y-3"
           >
@@ -250,43 +232,36 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
         <motion.div
           initial={{
             opacity: 0,
-            y: 15
+            y: 10,
           }}
           whileInView={{
             opacity: 1,
-            y: 0
+            y: 0,
           }}
           viewport={{
-            once: true
+            once: true,
           }}
           transition={{
-            duration: 0.5,
-            delay: 0.3
+            duration: 0.4,
+            delay: 0.2,
           }}
           className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400"
         >
 
           {/* Copyright */}
           <div className="flex items-center gap-2">
-
             <ShieldCheck className="w-4 h-4 text-teal-400" />
 
             <span>
               © {new Date().getFullYear()} KPS Technology. Seluruh Hak Cipta
               Dilindungi.
             </span>
-
           </div>
 
           {/* Back To Top */}
           <motion.button
             onClick={scrollToTop}
-            whileHover={{
-              y: -2
-            }}
-            whileTap={{
-              scale: 0.96
-            }}
+            whileHover={{ y: -2 }}
             className="flex items-center gap-1 text-teal-300 hover:text-white transition-colors font-medium"
           >
             <span>Kembali ke Atas</span>
