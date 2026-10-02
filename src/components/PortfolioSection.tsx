@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/mockData';
+import { WaveDivider } from './WaveDivider';
 
 interface PortfolioSectionProps {
   onConsultProject: (title: string) => void;
@@ -29,7 +30,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
   return (
     <section
       id="portofolio"
-      className="py-20 sm:py-24 bg-white text-slate-900 border-b border-slate-200"
+      className="py-20 sm:py-24 bg-white text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -180,8 +181,8 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
             </motion.div>
           ))}
         </motion.div>
-
       </div>
+      <WaveDivider color='f8fafc' />
     </section>
   );
 };
