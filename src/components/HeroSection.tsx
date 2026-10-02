@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'motion/react';
+import { WaveDivider } from './WaveDivider';
 
 interface HeroSectionProps {
   onOpenConsultation: (topic?: string) => void;
@@ -13,7 +14,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="beranda"
-      className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-white text-slate-900 border-b border-slate-200"
+      className="pt-24 sm:pt-32 pb-16 sm:pb-20 bg-white text-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -119,6 +120,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
       </div>
+      <WaveDivider color='#f8fafc'/>
     </section>
   );
 };

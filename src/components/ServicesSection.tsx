@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { WaveDivider } from './WaveDivider';
 
 interface ServicesSectionProps {
   onSelectService: (serviceTitle: string) => void;
@@ -65,7 +66,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   return (
     <section
       id="layanan"
-      className="py-16 sm:py-20 bg-slate-50 text-slate-900 border-b border-slate-200"
+      className="py-16 sm:py-20 bg-slate-50 text-slate-900"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -269,6 +270,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </div>
         )}
       </AnimatePresence>
+      <WaveDivider color='#ffffff' flip />
     </section>
   );
 };
